@@ -1,0 +1,240 @@
+voici le code: <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paysagiste Finistère (29) | Ropars Paysages</title>
+<meta name="description" content="Ropars Paysages – Paysagiste à Plourin (29600). Création, entretien et aménagement de jardins dans le Finistère. Devis gratuit.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Poppins,Arial,sans-serif;
+  line-height:1.6;
+  color:#333;
+  background:url("fond-carte-visite.jpg") center / cover fixed no-repeat;
+}
+
+a{text-decoration:none}
+img{max-width:100%;display:block}
+
+/* HEADER */
+header{
+  background:#1f6b08;
+  color:#fff;
+  padding:1em 2em;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{font-size:1.4em}
+header .actions a{
+  margin-left:15px;
+  padding:8px 14px;
+  border-radius:5px;
+  font-weight:500;
+}
+.call{background:#fff;color:#1f6b08}
+.fb{background:#1877f2;color:#fff}
+
+/* SECTIONS */
+section{
+  padding:4em 2em;
+  background:rgba(255,255,255,0.92);
+  margin:3em auto;
+  max-width:1200px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  backdrop-filter: blur(4px);
+}
+
+h2,h3{
+  color:#1f6b08;
+  text-align:center;
+  margin-bottom:1em;
+}
+
+/* HERO */
+.hero{text-align:center}
+.hero h2{font-size:2.2em}
+.hero p{font-size:1.1em;margin-bottom:1.5em}
+.hero a{
+  background:#2b7a0b;
+  color:#fff;
+  padding:14px 24px;
+  border-radius:6px;
+  font-weight:600;
+  display:inline-block;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.service{
+  background:#f5f5f5;
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+}
+
+/* CAROUSEL */
+.carousel{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+}
+.carousel img{display:none;border-radius:12px}
+.carousel img.active{display:block}
+.carousel button{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.6);
+  border:none;
+  color:#fff;
+  font-size:1.5em;
+  padding:12px;
+  cursor:pointer;
+  border-radius:50%;
+}
+.prev{left:10px}
+.next{right:10px}
+
+/* FORM */
+form{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+}
+input,textarea{
+  margin-bottom:15px;
+  padding:14px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+button{
+  background:#1f6b08;
+  color:#fff;
+  padding:14px;
+  border:none;
+  border-radius:6px;
+  font-size:1em;
+  cursor:pointer;
+}
+
+/* MAP */
+.map-container{
+  max-width:900px;
+  margin:auto;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer{
+  background:#1f6b08;
+  color:#fff;
+  text-align:center;
+  padding:1.5em;
+  font-size:.9em;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header{flex-direction:column;gap:10px}
+  .hero h2{font-size:1.7em}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Ropars Paysages</h1>
+  <div class="actions">
+    <a href="tel:0659114471" class="call">📞 06 59 11 44 71</a>
+    <a href="https://www.facebook.com/profile.php?id=61586147530822" target="_blank" class="fb">Facebook</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>Paysagiste dans le Finistère</h2>
+  <p>Création, entretien et aménagement de jardins – Devis gratuit</p>
+  <a href="#contact">Demander un devis</a>
+</section>
+
+<section>
+  <h3>Nos services</h3>
+  <div class="services">
+    <div class="service">🌿 Création de jardins</div>
+    <div class="service">✂️ Entretien espaces verts</div>
+    <div class="service">🪨 Aménagements extérieurs</div>
+    <div class="service">🌳 Taille & plantations</div>
+  </div>
+</section>
+
+<section>
+  <h3>Nos réalisations</h3>
+  <div class="carousel">
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+    <img src="image1.jpg" class="active" loading="lazy">
+    <img src="image2.jpg" loading="lazy">
+    <img src="image3.jpg" loading="lazy">
+  </div>
+</section>
+
+<section>
+  <h3>Zone d’intervention</h3>
+  <p style="text-align:center;margin-bottom:20px;">
+    Basés à la <strong>ZA de Kersody – 29600 Plourin</strong>, nous intervenons dans tout le Finistère.
+  </p>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps?q=ZA+de+Kersody+29600+Plourin+France&output=embed"
+      width="100%" height="400" style="border:0;" loading="lazy"></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <h3>Contact & devis gratuit</h3>
+  <form action="https://formspree.io/f/XXXXXXX" method="POST">
+    <input type="text" name="nom" placeholder="Nom complet" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="telephone" placeholder="Téléphone" required>
+    <textarea name="message" placeholder="Votre projet" rows="5" required></textarea>
+    <button type="submit">Envoyer la demande</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Ropars Paysages – ZA de Kersody, 29600 Plourin
+</footer>
+
+<script>
+let slide=0;
+const slides=document.querySelectorAll(".carousel img");
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+function nextSlide(){slide=(slide+1)%slides.length;showSlide(slide);}
+function prevSlide(){slide=(slide-1+slides.length)%slides.length;showSlide(slide);}
+setInterval(nextSlide,5000);
+</script>
+
+</body>
+</html>
