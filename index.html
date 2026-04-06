@@ -226,25 +226,5 @@ footer{
 
 <script>
   
-let slide=0;
-const slides=document.querySelectorAll(".carousel img");
-function showSlide(i){
-  slides.forEach(s=>s.classList.remove("active"));
-  slides[i].classList.add("active");
-}
-function nextSlide(){slide=(slide+1)%slides.length;showSlide(slide);}
-function prevSlide(){slide=(slide-1+slides.length)%slides.length;showSlide(slide);}
-setInterval(nextSlide,5000);
-</script>
-<div style="
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('ChatGPT Image 6 avr. 2026, 19_05_41.png') no-repeat center center;
-  background-size: cover;
-  z-index: 99999;
-"></div>
 </body>
 </html>
