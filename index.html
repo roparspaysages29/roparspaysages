@@ -4,201 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Paysagiste Morlaix (29) | Ropars Paysages</title>
-<meta name="description" content="Ropars Paysages – Paysagiste à Morlaix et Plourin. Création, entretien et aménagement de jardins dans le Finistère Nord. Devis rapide sous 24 à 48h ouvrées.">
-<meta name="robots" content="index, follow">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Ropars Paysages</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:Poppins,Arial,sans-serif;
-  color:#333;
-  background:url("fond-carte-visite.jpg") center / cover fixed no-repeat;
-}
+body{font-family:Arial;margin:0}
 
 /* HEADER */
 header{
   background:#1f6b08;
   color:#fff;
-  padding:1em 2em;
-  position:sticky;
-  top:0;
-  z-index:1000;
+  padding:15px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
-header h1{font-size:1.5em}
-
-.actions a{
-  margin-left:10px;
-  padding:10px 15px;
-  border-radius:6px;
-  font-weight:500;
-  text-decoration:none;
-}
-.call{background:#fff;color:#1f6b08}
-.fb{background:#1877f2;color:#fff}
 
 /* HERO */
 .hero{
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-  url("image1.jpg") center/cover no-repeat;
-  color:#fff;
-  text-align:center;
-  padding:6em 2em;
+  height:50vh;
+  background:url("fond-carte-visite.jpg") center/cover no-repeat;
 }
-.hero h2{font-size:2.3em;margin-bottom:15px}
-.hero p{font-size:1.2em;margin-bottom:25px}
 
-.hero a{
-  display:inline-block;
+/* TABS */
+.tabs{text-align:center;margin:20px}
+.tabs button{
   margin:5px;
-  padding:15px 25px;
-  border-radius:8px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-.btn-main{background:#2b7a0b;color:#fff}
-.btn-secondary{background:#fff;color:#1f6b08}
-
-/* BANDEAU */
-.urgence{
-  background:#ffe066;
-  text-align:center;
-  padding:15px;
-  font-weight:600;
-}
-
-/* SECTIONS */
-section{
-  padding:4em 2em;
-  max-width:1100px;
-  margin:3em auto;
-  background:rgba(255,255,255,0.95);
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-h3{
-  text-align:center;
-  margin-bottom:30px;
-  color:#1f6b08;
-}
-
-/* SERVICES */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:25px;
-}
-
-.service{
-  background:#fff;
-  padding:25px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-  transition:.3s;
-}
-
-.service:hover{
-  transform:translateY(-8px);
-}
-
-/* CAROUSEL */
-.carousel{
-  position:relative;
-  max-width:900px;
-  margin:auto;
-}
-
-.carousel img{
-  display:none;
-  border-radius:15px;
-  width:100%;
-}
-
-.carousel img.active{
-  display:block;
-}
-
-.carousel button{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.6);
-  color:#fff;
+  padding:10px 20px;
   border:none;
-  padding:10px;
+  background:#1f6b08;
+  color:#fff;
   cursor:pointer;
-  border-radius:50%;
 }
 
-.prev{left:10px}
-.next{right:10px}
+/* GALERIE */
+.tab{
+  display:none;
+  padding:20px;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
+}
+.tab.active{display:grid}
 
-/* FORM */
-form{
-  max-width:600px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
+.tab img{
+  width:100%;
+  border-radius:10px;
 }
 
-input,textarea{
+/* BOUTON CACHÉ */
+#admin-btn{
+  position:fixed;
+  bottom:5px;
+  right:5px;
+  width:25px;
+  height:25px;
+  opacity:0;
+}
+
+/* LOGIN */
+#login-box{
+  position:fixed;
+  bottom:50px;
+  right:20px;
+  background:#fff;
   padding:15px;
-  margin-bottom:15px;
-  border-radius:8px;
-  border:1px solid #ccc;
+  border-radius:10px;
+  display:none;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+input{
+  display:block;
+  margin:5px 0;
+  padding:8px;
 }
 
 button{
+  padding:10px;
   background:#1f6b08;
   color:#fff;
-  padding:15px;
   border:none;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:600;
-}
-
-/* CTA FIXE */
-.call-fixed{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#e63946;
-  color:#fff;
-  padding:18px 25px;
-  border-radius:50px;
-  font-weight:700;
-  z-index:999;
-  animation:pulse 1.5s infinite;
-  text-decoration:none;
-}
-
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.1)}
-  100%{transform:scale(1)}
-}
-
-/* FOOTER */
-footer{
-  background:#1f6b08;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero h2{font-size:1.8em}
 }
 </style>
 </head>
@@ -207,99 +90,99 @@ footer{
 
 <header>
   <h1>Ropars Paysages</h1>
-  <div class="actions">
-    <a href="tel:0659114471" class="call">📞 Appeler</a>
-    <a href="https://www.facebook.com/profile.php?id=61586147530822" target="_blank" rel="noopener noreferrer" class="fb">Facebook</a>
-  </div>
 </header>
 
-<section class="hero">
-  <h2>Paysagiste à Morlaix et dans le Finistère Nord</h2>
-  <p>Création, entretien et aménagement de jardins sur mesure</p>
+<div class="hero"></div>
 
-  <a href="tel:0659114471" class="btn-main">📞 Appeler</a>
-  <a href="#contact" class="btn-secondary">Demander un devis</a>
+<section>
+  <h2 style="text-align:center">Galerie</h2>
+
+  <div class="tabs">
+    <button onclick="showTab('creation')">Création</button>
+    <button onclick="showTab('entretien')">Entretien</button>
+  </div>
+
+  <div id="creation" class="tab active"></div>
+  <div id="entretien" class="tab"></div>
 </section>
 
-<div class="urgence">
-📅 Devis rapide – Réponse sous 24 à 48h ouvrées
+<!-- ADMIN -->
+<div id="admin-btn" onclick="openLogin()"></div>
+
+<div id="login-box">
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Mot de passe">
+  <button onclick="login()">Connexion</button>
 </div>
 
-<section>
-  <h3>Pourquoi choisir Ropars Paysages ?</h3>
-  <div class="services">
-    <div class="service">⚡ Intervention planifiée rapidement</div>
-    <div class="service">🌿 Travail soigné et professionnel</div>
-    <div class="service">💬 Devis clair et détaillé</div>
-    <div class="service">📍 Basé à Morlaix – Finistère Nord</div>
-  </div>
-</section>
-
-<section>
-  <h3>Nos services</h3>
-  <div class="services">
-    <div class="service">🌿 Création de jardins</div>
-    <div class="service">✂️ Entretien d'espaces verts</div>
-    <div class="service">🪨 Aménagement extérieur</div>
-    <div class="service">🌳 Taille & plantations</div>
-  </div>
-</section>
-
-<section>
-  <h3>Nos réalisations</h3>
-  <div class="carousel">
-    <button class="prev" onclick="prevSlide()">❮</button>
-    <button class="next" onclick="nextSlide()">❯</button>
-
-    <img src="image1.jpg" class="active" alt="Création de jardin à Morlaix">
-    <img src="image2.jpg" alt="Aménagement extérieur Finistère">
-    <img src="image3.jpg" alt="Entretien espace vert Plourin">
-  </div>
-</section>
-
-<section id="contact">
-  <h3>Contact & Devis</h3>
-  <form action="https://formspree.io/f/xeegqrze" method="POST">
-    <input type="text" name="nom" placeholder="Nom" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="tel" name="telephone" placeholder="Téléphone" required>
-    <textarea name="message" placeholder="Décrivez votre projet" required></textarea>
-    <button type="submit">Envoyer ma demande</button>
-  </form>
-</section>
-
-<a href="tel:0659114471" class="call-fixed">📞 Appeler</a>
-
-<footer>
-© <span id="year"></span> Ropars Paysages – Paysagiste Morlaix (29)
-</footer>
+<input type="file" id="upload" hidden>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+let isLogged = false;
+let currentTab = "creation";
 
-let index = 0;
-const slides = document.querySelectorAll(".carousel img");
-
-function showSlide(i){
-  slides.forEach(s => s.classList.remove("active"));
-  slides[i].classList.add("active");
+/* SWITCH ONGLET */
+function showTab(tab){
+  currentTab = tab;
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  document.getElementById(tab).classList.add("active");
 }
 
-window.nextSlide = function(){
-  index = (index + 1) % slides.length;
-  showSlide(index);
+/* LOGIN */
+function openLogin(){
+  document.getElementById("login-box").style.display = "block";
 }
 
-window.prevSlide = function(){
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
+function login(){
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
+
+  if(email === "jonathanropars8@gmail.com" && pass === "paysagiste"){
+    isLogged = true;
+    alert("Connecté !");
+    document.getElementById("login-box").style.display = "none";
+    document.getElementById("upload").click();
+  } else {
+    alert("Identifiants incorrects");
+  }
 }
 
-setInterval(nextSlide, 4000);
+/* UPLOAD IMAGE */
+document.getElementById("upload").addEventListener("change", function(e){
+  if(!isLogged) return;
 
-document.getElementById("year").textContent = new Date().getFullYear();
+  const file = e.target.files[0];
+  const reader = new FileReader();
 
+  reader.onload = function(){
+    const img = document.createElement("img");
+    img.src = reader.result;
+
+    document.getElementById(currentTab).appendChild(img);
+    saveImages();
+  }
+
+  reader.readAsDataURL(file);
 });
+
+/* SAVE LOCAL */
+function saveImages(){
+  const data = {
+    creation: document.getElementById("creation").innerHTML,
+    entretien: document.getElementById("entretien").innerHTML
+  };
+  localStorage.setItem("galerie", JSON.stringify(data));
+}
+
+function loadImages(){
+  const data = JSON.parse(localStorage.getItem("galerie"));
+  if(!data) return;
+
+  document.getElementById("creation").innerHTML = data.creation;
+  document.getElementById("entretien").innerHTML = data.entretien;
+}
+
+loadImages();
 </script>
 
 </body>
