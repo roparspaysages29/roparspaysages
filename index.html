@@ -15,7 +15,10 @@
 body{
   font-family:'Montserrat',sans-serif;
   color:#222;
-  background:#f5f5f5;
+
+  /* ✅ IMAGE EN FOND ÉCRAN */
+  background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+              url("fond-carte-visite.jpg") center center / cover no-repeat fixed;
 }
 
 /* HEADER */
@@ -54,8 +57,6 @@ header a{
 /* HERO */
 .hero{
   height:100vh;
-  background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-  url("image1.jpg") center/cover no-repeat;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -94,14 +95,14 @@ header a{
   color:#1f6b08;
 }
 
-/* SECTION STANDARD */
+/* SECTIONS */
 section{
   padding:100px 8%;
-  background:#fff;
+  background:rgba(255,255,255,0.95);
 }
 
 section.alt{
-  background:#f0f3ef;
+  background:rgba(240,243,239,0.95);
 }
 
 h3{
@@ -127,12 +128,6 @@ h3{
 
 .card:hover{
   transform:translateY(-10px);
-}
-
-/* IMAGE SECTION */
-.image-section{
-  background:url("image2.jpg") center/cover no-repeat;
-  height:400px;
 }
 
 /* CONTACT */
@@ -213,14 +208,12 @@ footer{
   </div>
 </section>
 
-<div class="image-section"></div>
-
 <section class="alt">
   <h3>Pourquoi choisir Ropars Paysages ?</h3>
   <div class="grid">
     <div class="card">✔ Intervention rapide</div>
     <div class="card">✔ Travail soigné</div>
-    <div class="card">✔ Devis clair sous 48h</div>
+    <div class="card">✔ Devis sous 48h</div>
     <div class="card">✔ Entreprise locale à Morlaix</div>
   </div>
 </section>
