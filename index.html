@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Paysagiste Morlaix (29) | Ropars Paysages</title>
-<meta name="description" content="Ropars Paysages – Paysagiste à Morlaix et Plourin. Création, entretien et aménagement de jardins dans le Finistère. Devis très rapide.">
+<meta name="description" content="Ropars Paysages – Paysagiste à Morlaix et Plourin. Création, entretien et aménagement de jardins dans le Finistère Nord. Devis rapide sous 24 à 48h ouvrées.">
 <meta name="robots" content="index, follow">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -79,10 +79,9 @@ section{
   padding:4em 2em;
   max-width:1100px;
   margin:3em auto;
-  background:rgba(255,255,255,0.92);
+  background:rgba(255,255,255,0.95);
   border-radius:20px;
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
-  backdrop-filter: blur(4px);
 }
 
 h3{
@@ -165,6 +164,7 @@ button{
   border:none;
   border-radius:8px;
   cursor:pointer;
+  font-weight:600;
 }
 
 /* CTA FIXE */
@@ -214,24 +214,24 @@ footer{
 </header>
 
 <section class="hero">
-  <h2>Transformez votre jardin dès maintenant</h2>
-  <p>Paysagiste à Morlaix, Plourin et Finistère Nord</p>
+  <h2>Paysagiste à Morlaix et dans le Finistère Nord</h2>
+  <p>Création, entretien et aménagement de jardins sur mesure</p>
 
   <a href="tel:0659114471" class="btn-main">📞 Appeler</a>
   <a href="#contact" class="btn-secondary">Demander un devis</a>
 </section>
 
 <div class="urgence">
-🔥 Devis très rapide – Intervention rapide
+📅 Devis rapide – Réponse sous 24 à 48h ouvrées
 </div>
 
 <section>
-  <h3>Pourquoi nous choisir ?</h3>
+  <h3>Pourquoi choisir Ropars Paysages ?</h3>
   <div class="services">
-    <div class="service">⚡ Intervention rapide</div>
-    <div class="service">🌿 Travail soigné</div>
-    <div class="service">💬 Devis rapide</div>
-    <div class="service">📍 Finistère Nord</div>
+    <div class="service">⚡ Intervention planifiée rapidement</div>
+    <div class="service">🌿 Travail soigné et professionnel</div>
+    <div class="service">💬 Devis clair et détaillé</div>
+    <div class="service">📍 Basé à Morlaix – Finistère Nord</div>
   </div>
 </section>
 
@@ -239,7 +239,7 @@ footer{
   <h3>Nos services</h3>
   <div class="services">
     <div class="service">🌿 Création de jardins</div>
-    <div class="service">✂️ Entretien espaces verts</div>
+    <div class="service">✂️ Entretien d'espaces verts</div>
     <div class="service">🪨 Aménagement extérieur</div>
     <div class="service">🌳 Taille & plantations</div>
   </div>
@@ -251,30 +251,32 @@ footer{
     <button class="prev" onclick="prevSlide()">❮</button>
     <button class="next" onclick="nextSlide()">❯</button>
 
-    <img src="image1.jpg" class="active" alt="Réalisation jardin 1">
-    <img src="image2.jpg" alt="Réalisation jardin 2">
-    <img src="image3.jpg" alt="Réalisation jardin 3">
+    <img src="image1.jpg" class="active" alt="Création de jardin à Morlaix">
+    <img src="image2.jpg" alt="Aménagement extérieur Finistère">
+    <img src="image3.jpg" alt="Entretien espace vert Plourin">
   </div>
 </section>
 
 <section id="contact">
-  <h3>Contact</h3>
+  <h3>Contact & Devis</h3>
   <form action="https://formspree.io/f/xeegqrze" method="POST">
     <input type="text" name="nom" placeholder="Nom" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="tel" name="telephone" placeholder="Téléphone" required>
-    <textarea name="message" placeholder="Votre projet" required></textarea>
-    <button type="submit">Envoyer</button>
+    <textarea name="message" placeholder="Décrivez votre projet" required></textarea>
+    <button type="submit">Envoyer ma demande</button>
   </form>
 </section>
 
 <a href="tel:0659114471" class="call-fixed">📞 Appeler</a>
 
 <footer>
-© 2026 Ropars Paysages – Paysagiste Finistère
+© <span id="year"></span> Ropars Paysages – Paysagiste Morlaix (29)
 </footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", function(){
+
 let index = 0;
 const slides = document.querySelectorAll(".carousel img");
 
@@ -283,17 +285,21 @@ function showSlide(i){
   slides[i].classList.add("active");
 }
 
-function nextSlide(){
+window.nextSlide = function(){
   index = (index + 1) % slides.length;
   showSlide(index);
 }
 
-function prevSlide(){
+window.prevSlide = function(){
   index = (index - 1 + slides.length) % slides.length;
   showSlide(index);
 }
 
 setInterval(nextSlide, 4000);
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+});
 </script>
 
 </body>
