@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Paysagiste Morlaix (29) | Ropars Paysages</title>
-<meta name="description" content="Ropars Paysages – Paysagiste à Morlaix et Plourin. Création, entretien et aménagement de jardins dans le Finistère. Devis rapide.">
+<meta name="description" content="Ropars Paysages – Paysagiste à Morlaix et Plourin. Création, entretien et aménagement de jardins dans le Finistère. Devis très rapide.">
 <meta name="robots" content="index, follow">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -32,18 +32,20 @@ header{
   align-items:center;
 }
 header h1{font-size:1.5em}
+
 .actions a{
   margin-left:10px;
   padding:10px 15px;
   border-radius:6px;
   font-weight:500;
+  text-decoration:none;
 }
 .call{background:#fff;color:#1f6b08}
 .fb{background:#1877f2;color:#fff}
 
 /* HERO */
 .hero{
-  background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
   url("image1.jpg") center/cover no-repeat;
   color:#fff;
   text-align:center;
@@ -51,13 +53,16 @@ header h1{font-size:1.5em}
 }
 .hero h2{font-size:2.3em;margin-bottom:15px}
 .hero p{font-size:1.2em;margin-bottom:25px}
+
 .hero a{
   display:inline-block;
   margin:5px;
   padding:15px 25px;
   border-radius:8px;
   font-weight:600;
+  text-decoration:none;
 }
+
 .btn-main{background:#2b7a0b;color:#fff}
 .btn-secondary{background:#fff;color:#1f6b08}
 
@@ -79,7 +84,12 @@ section{
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
   backdrop-filter: blur(4px);
 }
-h3{text-align:center;margin-bottom:30px;color:#1f6b08}
+
+h3{
+  text-align:center;
+  margin-bottom:30px;
+  color:#1f6b08;
+}
 
 /* SERVICES */
 .services{
@@ -87,6 +97,7 @@ h3{text-align:center;margin-bottom:30px;color:#1f6b08}
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:25px;
 }
+
 .service{
   background:#fff;
   padding:25px;
@@ -95,12 +106,28 @@ h3{text-align:center;margin-bottom:30px;color:#1f6b08}
   box-shadow:0 5px 20px rgba(0,0,0,0.1);
   transition:.3s;
 }
-.service:hover{transform:translateY(-8px)}
+
+.service:hover{
+  transform:translateY(-8px);
+}
 
 /* CAROUSEL */
-.carousel{position:relative;max-width:900px;margin:auto}
-.carousel img{display:none;border-radius:15px}
-.carousel img.active{display:block}
+.carousel{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+}
+
+.carousel img{
+  display:none;
+  border-radius:15px;
+  width:100%;
+}
+
+.carousel img.active{
+  display:block;
+}
+
 .carousel button{
   position:absolute;
   top:50%;
@@ -112,6 +139,7 @@ h3{text-align:center;margin-bottom:30px;color:#1f6b08}
   cursor:pointer;
   border-radius:50%;
 }
+
 .prev{left:10px}
 .next{right:10px}
 
@@ -122,12 +150,14 @@ form{
   display:flex;
   flex-direction:column;
 }
+
 input,textarea{
   padding:15px;
   margin-bottom:15px;
   border-radius:8px;
   border:1px solid #ccc;
 }
+
 button{
   background:#1f6b08;
   color:#fff;
@@ -137,7 +167,7 @@ button{
   cursor:pointer;
 }
 
-/* BOUTON APPEL */
+/* CTA FIXE */
 .call-fixed{
   position:fixed;
   bottom:20px;
@@ -149,7 +179,9 @@ button{
   font-weight:700;
   z-index:999;
   animation:pulse 1.5s infinite;
+  text-decoration:none;
 }
+
 @keyframes pulse{
   0%{transform:scale(1)}
   50%{transform:scale(1.1)}
@@ -184,12 +216,13 @@ footer{
 <section class="hero">
   <h2>Transformez votre jardin dès maintenant</h2>
   <p>Paysagiste à Morlaix, Plourin et Finistère Nord</p>
+
   <a href="tel:0659114471" class="btn-main">📞 Appeler</a>
   <a href="#contact" class="btn-secondary">Demander un devis</a>
 </section>
 
 <div class="urgence">
-🔥 Devis sous 24h – Intervention rapide
+🔥 Devis très rapide – Intervention rapide
 </div>
 
 <section>
@@ -198,7 +231,7 @@ footer{
     <div class="service">⚡ Intervention rapide</div>
     <div class="service">🌿 Travail soigné</div>
     <div class="service">💬 Devis rapide</div>
-    <div class="service">📍 Basé dans le Finistère</div>
+    <div class="service">📍 Finistère Nord</div>
   </div>
 </section>
 
@@ -217,9 +250,10 @@ footer{
   <div class="carousel">
     <button class="prev" onclick="prevSlide()">❮</button>
     <button class="next" onclick="nextSlide()">❯</button>
-    <img src="image1.jpg" class="active" alt="">
-    <img src="image2.jpg" alt="">
-    <img src="image3.jpg" alt="">
+
+    <img src="image1.jpg" class="active" alt="Réalisation jardin 1">
+    <img src="image2.jpg" alt="Réalisation jardin 2">
+    <img src="image3.jpg" alt="Réalisation jardin 3">
   </div>
 </section>
 
